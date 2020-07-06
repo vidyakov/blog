@@ -1,0 +1,25 @@
+{% extends 'admin/base.html' %}
+
+
+{% block title %}
+Admin Panel
+{% endblock title %}
+
+
+{% block content %}
+<section class="author-info">
+    <p>Name: {{ admin.name }}</p>
+    <p>Email: {{ admin.email }}</p>
+</section>
+
+<section class="posts-list">
+    <h2>Posts</h2>
+    {% for post in posts %}
+        <div class="post-info">
+            <h2>{{ post.title }}</h2>
+            <span>{{ post.date }}</span>
+            <a href="{{ url_for('pages_app.post', post_id=post.id) }}">Post Page</a>
+        </div>
+    {% endfor %}
+</section>
+{% endblock content %}

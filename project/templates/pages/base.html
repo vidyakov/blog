@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        {% endblock title %}
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    {% block css %}
+    {% endblock css %}
+    {% block js %}
+    {% endblock js %}
+</head>
+<body>
+<div class="page-wrapper">
+    <div class="content-wrapper">
+        <header>
+            <div class="wrapper">
+                <nav class="social">
+                    <a href="#"><ion-icon name="logo-vk"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="#"><ion-icon name="navigate-circle-outline"></ion-icon></a>
+                </nav>
+                <section class="header">
+                    <h1 class="logo"><a href="{{ url_for('pages_app.index') }}">Блог моей девушки</a></h1>
+                    <nav class="menu">
+                        <a href="{{ url_for('pages_app.category', category_id=1) }}">ЖурФАК</a>
+                        <a href="{{ url_for('pages_app.category', category_id=2) }}">Записки</a>
+                        <a href="{{ url_for('pages_app.category', category_id=3) }}">Истории</a>
+                        <a href="{{ url_for('pages_app.about_me') }}">Обо мне</a>
+                    </nav>
+                </section>
+            </div>
+        </header>
+
+        <main>
+            {% block content %}
+            {% endblock content %}
+        </main>
+    </div>
+    <footer>
+        <div class="wrapper">
+            <div class="footer">
+                <h1 class="logo">Блог моей девушки</h1>
+                <div class="pages">
+                    <a href="#">ЖурФАК</a>
+                    <a href="#">Записки</a>
+                    <a href="#">Истории</a>
+                    <a href="{{ url_for('pages_app.about_me') }}">Обо мне</a>
+                </div>
+                <div class="social-footer">
+                    <a href="#">
+                        <ion-icon name="logo-vk"></ion-icon>
+                    </a>
+                    <a href="#">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                    <a href="#">
+                        <ion-icon name="navigate-circle-outline"></ion-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

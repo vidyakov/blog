@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: gainsboro;
+}
+
+.active {
+    color: gainsboro;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.content-wrapper {
+    flex: 1 0 auto;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+/*HEADER*/
+.header {
+    text-align: justify;
+}
+
+header {
+    background-color: whitesmoke;
+}
+
+header a {
+    color: black;
+}
+
+.header::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
+.logo, .menu {
+    display: inline-block;
+}
+
+.logo {
+    font-size: 50px;
+}
+
+.menu a {
+    padding-left: 20px;
+}
+
+.social {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    top: 20px;
+}
+
+.social a {
+    padding-left: 10px;
+}
+
+/*POSTS*/
+.post img{
+    max-width: 600px;
+    height: auto;
+}
+
+.post {
+    padding: 50px 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.post div {
+    display: flex;
+    padding: 0 50px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.post.right {
+    text-align: right;
+    flex-direction: row-reverse;
+}
+
+.read {
+    margin-top: 20px;
+    text-align: center;
+    color: whitesmoke;
+    padding: 5px 10px;
+    background-color: chocolate;
+}
+
+.read:hover {
+    background-color: indianred;
+}
+
+.tag {
+    color: chocolate;
+    margin-bottom: 30px;
+}
+
+/*FOOTER*/
+footer {
+    background-color: black;
+    flex: 0 0 auto;
+}
+
+footer a {
+    color: white;
+}
+
+.footer {
+    height: 200px;
+    display: flex;
+    color: whitesmoke;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pages {
+    display: flex;
+    width: 210px;
+    justify-content: space-between;
+
+}
+
+.social-footer a {
+    padding-left: 10px;
+}
+
+
+.rights ion-icon {
+    color: whitesmoke;
+}
+
+.logo a:hover {
+    color: black;
+}
+
+
+/*FIRST BLOCK*/
+.colored {
+    background-color: whitesmoke;
+}
+.first-block {
+    display: flex;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.first-block img{
+    width: 850px;
+}
+
+.first-block div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    left: 100px;
+    width: 200px;
+}
+
+.read {
+    width: 50px;
+}
+

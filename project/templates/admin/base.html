@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        {% endblock title %}
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header>
+            <div class="wrapper">
+                <section class="header">
+                    <h1 class="logo">Admin Panel</h1>
+                    <nav class="menu">
+                        <a href="{{ url_for('pages_app.index') }}">Index page</a>
+                        <a href="#">New post</a>
+                        <a href="{{ url_for('admin.register') }}">New author</a>
+                        <a href="{{ url_for('admin.logout') }}">Logout</a>
+                    </nav>
+                </section>
+            </div>
+        </header>
+        <main>
+            <div class="wrapper">
+                {% block content %}
+                {% endblock content %}
+            </div>
+        </main>
+    </div>
+</body>
+</html>

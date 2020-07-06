@@ -1,0 +1,14 @@
+{% extends 'pages/base.html' %}
+
+
+{% block title %}
+    {{ error.text }}
+{% endblock title %}
+
+
+{% block content %}
+<div class="wrapper">
+    <h1>Код ошибки: {{ error.code }}</h1>
+    <p>{{ error.text }}</p>
+</div>
+{% endblock content %}

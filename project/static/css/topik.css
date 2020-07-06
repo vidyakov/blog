@@ -1,0 +1,23 @@
+.first-block h1 {
+    /*color: chocolate;*/
+}
+
+.text {
+    padding: 50px 40px;
+}
+
+.text p {
+    font-size: 25px;
+}
+
+.text h2 {
+    color: chocolate;
+    text-align: center;
+    padding: 40px;
+    font-size: 40px;
+}
+
+.text img {
+    margin: 10px 0;
+    max-width: 100%;
+}

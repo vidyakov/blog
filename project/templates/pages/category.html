@@ -1,0 +1,21 @@
+{% extends 'pages/base.html' %}
+
+
+{% block title %}
+
+{% endblock title %}
+
+
+{% block content %}
+<div class="colored">
+    <section class="first-block">
+        <div>
+            <span class="tag">Обо мне</span>
+            <h2>Из режисеров в журналисты за год</h2>
+            <a href="{{ url_for('pages_app.about_me') }}" class="read">Читать</a>
+        </div>
+        <img src="{{ url_for('static', filename='img/first.jpeg') }}" alt="">
+    </section>
+</div>
+{{ posts }}
+{% endblock content %}
