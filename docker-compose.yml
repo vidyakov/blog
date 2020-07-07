@@ -26,13 +26,15 @@ services:
       options:
         max-file: "5"
         max-size: "1m"
-    restart: always
     build:
       context: .
     ports:
       - 3000:5000
     volumes:
       - ./db:/app/db
+    entrypoint:
+      - "python"
+      - "create_models.py"
     command:
       - "flask"
       - "run"

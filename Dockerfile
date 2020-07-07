@@ -6,5 +6,5 @@ COPY project/requirements.txt .
 RUN pip install -r requirements.txt
 
 COPY project/ .
-RUN python create_models.py
 
+EXPOSE 5000
