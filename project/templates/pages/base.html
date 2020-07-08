@@ -27,9 +27,9 @@
                 <section class="header">
                     <h1 class="logo"><a href="{{ url_for('pages_app.index') }}">Блог моей девушки</a></h1>
                     <nav class="menu">
-                        <a href="{{ url_for('pages_app.category', category_id=1) }}">ЖурФАК</a>
-                        <a href="{{ url_for('pages_app.category', category_id=2) }}">Записки</a>
-                        <a href="{{ url_for('pages_app.category', category_id=3) }}">Истории</a>
+                        {% for category in categories %}
+                            <a href="{{ url_for('pages_app.category', category_id=category.id) }}">{{ category.name }}</a>
+                        {% endfor %}
                         <a href="{{ url_for('pages_app.about_me') }}">Обо мне</a>
                     </nav>
                 </section>
@@ -46,9 +46,9 @@
             <div class="footer">
                 <h1 class="logo">Блог моей девушки</h1>
                 <div class="pages">
-                    <a href="#">ЖурФАК</a>
-                    <a href="#">Записки</a>
-                    <a href="#">Истории</a>
+                    {% for category in categories %}
+                        <a href="{{ url_for('pages_app.category', category_id=category.id) }}">{{ category.name }}</a>
+                    {% endfor %}
                     <a href="{{ url_for('pages_app.about_me') }}">Обо мне</a>
                 </div>
                 <div class="social-footer">

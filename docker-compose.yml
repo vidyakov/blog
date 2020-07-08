@@ -32,8 +32,7 @@ services:
     volumes:
       - ./db:/app/db
     entrypoint:
-      - "bash"
-      - "create_models.sh"
+      - "./create_models.sh"
     command:
       - "flask"
       - "run"
