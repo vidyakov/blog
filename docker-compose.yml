@@ -14,7 +14,6 @@ services:
     volumes:
       - ./db/pg:/var/lib/postgresql/data
     environment:
-      POSTGRES_DB: postgres
       POSTGRES_USER: myuser
       POSTGRES_PASSWORD: mypassword
 
@@ -33,8 +32,8 @@ services:
     volumes:
       - ./db:/app/db
     entrypoint:
-      - "python"
-      - "create_models.py"
+      - "bash"
+      - "create_models.sh"
     command:
       - "flask"
       - "run"
